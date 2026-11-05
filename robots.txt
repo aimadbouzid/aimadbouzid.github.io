@@ -1,0 +1,50 @@
+# robots.txt — racine de aimadbouzid.github.io
+#
+# C'est le SEUL robots.txt que les robots lisent sur ce domaine. Un fichier
+# placé dans un sous-dossier — /makers/robots.txt par exemple — est ignoré :
+# un robots.txt se lit à la racine d'un domaine, et nulle part ailleurs.
+# Celui-ci vaut donc pour tout ce qui est publié sous aimadbouzid.github.io.
+
+# Les moteurs de recherche sont les bienvenus : être trouvé, c'est le but.
+User-agent: *
+Allow: /
+
+# --- Collecte pour entraîner des modèles : non merci --------------------------
+# Ces robots-là ne référencent rien, ils ramassent du texte pour entraîner des
+# modèles. Les règles ci-dessous ne touchent PAS au référencement : Googlebot et
+# Bingbot restent autorisés par la règle générale au-dessus.
+#
+# Google-Extended et Applebot-Extended ne sont pas des robots mais des jetons de
+# refus : les bloquer retire le contenu de l'entraînement de Gemini et d'Apple
+# Intelligence, sans rien changer à la présence dans Google Search ni dans Siri.
+#
+# C'est une politesse, pas une sécurité : un robot malveillant ignore ce fichier.
+# La vraie protection est qu'il n'y a rien de privé ici — tout ce qui est publié
+# est public par construction.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# --- Plans de site ------------------------------------------------------------
+Sitemap: https://aimadbouzid.github.io/makers/sitemap.xml
